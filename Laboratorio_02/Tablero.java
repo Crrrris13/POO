@@ -20,7 +20,7 @@ public class Tablero {
     private void inicializarFichas() {
         ArrayList<String> simbolos = new ArrayList<>();
         String[] baseSimbolos = {
-                "🍎", "🍌", "🍇", "🍓", "🍉", "🍍", "🥝", "🍑", "🍒", "🥥"
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"
         };
 
         for (int i = 0; i < totalPares; i++) {
