@@ -35,7 +35,17 @@ public class Tablero {
     }
 
     public void colocarBarcos(int cantidad, Random rnd) {
+        int colocados = 0;
 
+        while (colocados < cantidad){
+            int i = rnd.nextInt(this.n);
+            int j = rnd.nextInt(this.n);
+
+            if (!this.celdas[i][j].tieneBarco()) {
+                this.celdas[i][j].ponerBarco();
+                colocados++;
+            }
+        }
     }
 
     public boolean disparar(int i, int j) {
