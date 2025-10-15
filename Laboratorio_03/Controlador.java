@@ -46,7 +46,6 @@ public class Controlador {
                         break;
                     case 6:
                         manager.reportePersonal();
-                        vista.pausar();
                         break;
                     case 7:
                         manejarReporteCitas();
@@ -69,7 +68,6 @@ public class Controlador {
                 }
             } catch (Exception e) {
                 vista.mostrarError(e.getMessage());
-                vista.pausar();
             }
         }
 
@@ -149,8 +147,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -159,7 +155,7 @@ public class Controlador {
     private void manejarProgramacionCita() {
         try {
             vista.mostrarSeparador();
-            vista.mostrarMensaje("📅 PROGRAMAR CITA");
+            vista.mostrarMensaje("PROGRAMAR CITA");
             vista.mostrarSeparador();
 
             String nombrePaciente = vista.leerString("Nombre del paciente: ");
@@ -173,8 +169,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -183,7 +177,7 @@ public class Controlador {
     private void manejarReagendamiento() {
         try {
             vista.mostrarSeparador();
-            vista.mostrarMensaje("🔄 REAGENDAR CITA");
+            vista.mostrarMensaje("REAGENDAR CITA");
             vista.mostrarSeparador();
 
             String idCita = vista.leerString("ID de la cita: ");
@@ -197,8 +191,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -207,7 +199,7 @@ public class Controlador {
     private void manejarCambioEstado() {
         try {
             vista.mostrarSeparador();
-            vista.mostrarMensaje("🔄 CAMBIAR ESTADO DE CITA");
+            vista.mostrarMensaje("CAMBIAR ESTADO DE CITA");
             vista.mostrarSeparador();
 
             String idCita = vista.leerString("ID de la cita: ");
@@ -224,8 +216,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -234,7 +224,7 @@ public class Controlador {
     private void manejarBusquedaDisponible() {
         try {
             vista.mostrarSeparador();
-            vista.mostrarMensaje("🔍 BUSCAR PERSONAL DISPONIBLE");
+            vista.mostrarMensaje("BUSCAR PERSONAL DISPONIBLE");
             vista.mostrarSeparador();
 
             vista.mostrarMensaje("\nTipos de médico:");
@@ -274,8 +264,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -293,8 +281,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -328,8 +314,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -347,8 +331,6 @@ public class Controlador {
         } catch (Exception e) {
             vista.mostrarError(e.getMessage());
         }
-
-        vista.pausar();
     }
 
     /**
@@ -394,7 +376,6 @@ public class Controlador {
             vista.mostrarError(e.getMessage());
         }
 
-        vista.pausar();
     }
 
 }

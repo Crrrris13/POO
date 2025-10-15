@@ -3,7 +3,6 @@ import java.util.Scanner;
 /**
  * Vista del sistema - Vista en MVC
  * Maneja la interacción con el usuario
- * @author [Tu nombre]
  */
 public class Vista {
     private final Scanner scanner;
@@ -16,9 +15,7 @@ public class Vista {
      * Muestra el menú principal
      */
     public void mostrarMenu() {
-        System.out.println("\n" + "╔" + "=".repeat(78) + "╗");
-        System.out.println("║" + centrar("SISTEMA DE GESTIÓN HOSPITALARIA", 78) + "║");
-        System.out.println("╚" + "=".repeat(78) + "╝");
+        System.out.println("SISTEMA DE GESTIÓN HOSPITALARIA");
         System.out.println(" 1.  Registrar Médico");
         System.out.println(" 2.  Programar Cita");
         System.out.println(" 3.  Reagendar Cita");
@@ -30,33 +27,19 @@ public class Vista {
         System.out.println(" 9.  Historial de Cambios de Cita");
         System.out.println("10.  Registrar Actividad de Médico");
         System.out.println(" 0.  Salir");
-        System.out.println("─".repeat(80));
     }
 
     /**
      * Submenú para tipo de médico
      */
     public int mostrarMenuTipoMedico() {
-        System.out.println("\n┌" + "─".repeat(48) + "┐");
-        System.out.println("│" + centrar("TIPO DE MÉDICO A REGISTRAR", 48) + "│");
-        System.out.println("└" + "─".repeat(48) + "┘");
+        System.out.println(("TIPO DE MÉDICO A REGISTRAR"));
         System.out.println("1. Doctor General");
         System.out.println("2. Cirujano");
         System.out.println("3. Enfermero/a");
         System.out.println("4. Radiólogo");
-        System.out.println("5. Farmacéutico");
-        System.out.println("6. Terapeuta");
         System.out.print("Opción: ");
         return leerEntero();
-    }
-
-    /**
-     * Centra un texto en un ancho dado
-     */
-    private String centrar(String texto, int ancho) {
-        int espacios = (ancho - texto.length()) / 2;
-        return " ".repeat(Math.max(0, espacios)) + texto +
-                " ".repeat(Math.max(0, ancho - texto.length() - espacios));
     }
 
     /**
@@ -232,14 +215,6 @@ public class Vista {
      */
     public void mostrarSeparador() {
         System.out.println("─".repeat(80));
-    }
-
-    /**
-     * Pausa hasta Enter
-     */
-    public void pausar() {
-        System.out.print("\nPresione ENTER para continuar...");
-        scanner.nextLine();
     }
 
     /**

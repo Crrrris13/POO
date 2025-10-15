@@ -6,7 +6,6 @@ import java.util.HashMap;
 /**
  * Manager del Hospital - Modelo en MVC
  * Maneja toda la lógica de negocio
- * @author [Tu nombre]
  */
 public class HospitalManager {
     private final ArrayList<Medico> medicos;
@@ -37,7 +36,7 @@ public class HospitalManager {
         }
 
         medicos.add(medico);
-        System.out.println("✅ Médico registrado: " + medico.getNombre());
+        System.out.println("Médico registrado: " + medico.getNombre());
     }
 
     /**
@@ -121,7 +120,7 @@ public class HospitalManager {
         citas.add(nuevaCita);
         medico.asignarCita(nuevaCita);
 
-        System.out.println("✅ Cita programada: " + idCita);
+        System.out.println("Cita programada: " + idCita);
         return nuevaCita;
     }
 
@@ -154,7 +153,7 @@ public class HospitalManager {
         }
 
         cita.reagendar(nuevaFecha, motivo, fechaActual);
-        System.out.println("✅ Cita reagendada correctamente");
+        System.out.println("Cita reagendada correctamente");
     }
 
     /**
