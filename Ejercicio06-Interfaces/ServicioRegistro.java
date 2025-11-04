@@ -11,6 +11,6 @@ public class ServicioRegistro {
         if (registrable == null) {
             return new String[0]; //Array vacio pero no null
         }
-        return registrable.obtenerHistorialRegistros()
+        return registrable.obtenerHistorialRegistros();
     }
 }

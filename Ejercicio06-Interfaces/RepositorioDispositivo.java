@@ -20,7 +20,7 @@ public class RepositorioDispositivo {
 
     public DispositivoAgricola buscarPorId(String id) {
         for (DispositivoAgricola dispositivo : catalogo) {
-            if (dispositivo.getId.Equals(id)) {
+            if (id.equals(dispositivo.getId())) {
                 return dispositivo;
             }
         }
@@ -34,7 +34,8 @@ public class RepositorioDispositivo {
         String nombreBusqueda = nombre.toLowerCase();
 
         for (DispositivoAgricola dispositivo : catalogo) {
-            if (dispositivo.getNombre.toLowerCase().contains(nombreBusqueda)) {
+            String n = dispositivo.getNombre();
+            if (n != null && n.toLowerCase().contains(nombreBusqueda)) {
                 resultados.add(dispositivo);
             }
         }

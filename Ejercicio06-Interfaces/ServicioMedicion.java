@@ -7,7 +7,7 @@ public class ServicioMedicion {
         // Llamar al método obtenerMedicion() del dispositivo
         // Gracias al polimorfismo, se ejecuta la versión correcta
         // según el tipo real del objeto
-        return medible.obtenerMedicion();
+        return medible.getMedicion();
     }
 
     public String tipoDeMedicion(Medible medible) {
@@ -15,7 +15,7 @@ public class ServicioMedicion {
             return "Dispositivo no valido";
         }
 
-        return.medible.getTipoMedicion()
+        return medible.getTipoMedicion();
     }
 
 }
